@@ -35,6 +35,9 @@ main {
   margin-inline: 2px;
 }
 
+.nav-button:hover {
+  background-color: #e5d4d4;
+}
 .nav-header {
   background-color: #430404;
   display: flex;
@@ -105,6 +108,7 @@ input, textarea {
   width: 330px;
   height: 200px;
   object-fit: cover;
+  margin-bottom: 1em;
 }
 
 .bottom-card {
@@ -112,6 +116,20 @@ input, textarea {
   display: flex;
   justify-content: space-around;
   gap: 1.5em;
+}
+
+.button-more {
+  border-radius: 1em;
+  background-color: #863838;
+  padding: 0.6em;
+
+  text-decoration: none;
+  color: white;
+  font-size: 0.8em;
+}
+
+.button-more:hover {
+  background-color: #e97a7a;
 }
 
 .stats-table {
@@ -141,16 +159,23 @@ th {
 }
 
 .detail-article {
+  background-color: #c2b4b4;
   padding: 1em;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1em;
   width: 50%;
   border: 1px solid black;
 }
 
 .detail-card {
+  background-color: #662828;
   border: 1px solid black;
   padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-position {
@@ -228,6 +253,16 @@ footer > p {
   .nav-menu {
     display: flex;
   }
+  .detail-article{
+    background-color: unset;
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 50%;
+    border: unset;
+  }
   footer > p {
     font-size: 1rem;
   }
@@ -266,6 +301,15 @@ footer > p {
 @media only screen and (max-width: 489px) {
   .display-flex-center > form {
     width: 300px;
+  }
+}
+
+@media only screen and (max-width: 335px) {
+  .detail-card {
+    font-size: 0.9em;
+  }
+  .detail-card > img {
+    width: 200px;
   }
 }
 
