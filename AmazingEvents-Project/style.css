@@ -13,7 +13,7 @@ body {
   color: #fff8f8;
   display: flex;
   flex-direction: column;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 main {
@@ -102,6 +102,8 @@ input, textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: min-content;
+  height: 80%;
 }
 
 .card > img {
