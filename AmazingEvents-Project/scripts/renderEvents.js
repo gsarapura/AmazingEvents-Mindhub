@@ -1,4 +1,4 @@
-let data = {
+const data = {
     "currentDate": "2022-01-01",
     "events": [
       {
@@ -212,7 +212,6 @@ for (let event of data.events) {
     futureEventsCards.push(futureCard)
   }
 }
-console.log(pastEventsCards)
 
 const renderEvents = () => {
   let container = document.querySelector('#cards')
@@ -222,6 +221,6 @@ const renderEvents = () => {
   } else {
     container.innerHTML = pastEventsCards.join('')
   }
-  console.log('se imprimió')
 }
+
 renderEvents()
