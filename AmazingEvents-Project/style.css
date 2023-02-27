@@ -64,6 +64,15 @@ main {
 
 .checkbox-container {
   gap: 1em;
+  flex-wrap: wrap;
+}
+
+.search-container {
+  align-items: center;
+}
+
+.select-icon {
+  width: 5%;
 }
 
 .display-flex-center {
@@ -83,7 +92,8 @@ main {
 }
 fieldset {
   all: inherit;
-  padding: 1rem;
+  padding: 0.4rem;
+  margin-top: 1em;
 }
 
 .cards-container {
@@ -235,7 +245,9 @@ footer > p {
     display: none;
   }
   .checkbox-menu {
+    background-color: #8e1a1a;
     display: block;
+    border-radius: 10px;
   }
   select {
     font-size: 1em;
