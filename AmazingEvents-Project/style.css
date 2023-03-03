@@ -47,6 +47,7 @@ main {
 
 .header-home {
   background-color: #811313;
+  flex: 1;
   display: flex;
   justify-content: space-around;
   align-items: center;
