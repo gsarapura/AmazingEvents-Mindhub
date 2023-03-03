@@ -47,14 +47,26 @@ main {
 
 .header-home {
   background-color: #811313;
-  flex: 1;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
 }
 
+.header-home-link {
+  text-decoration: none;
+  color: #fff8f8;
+}
+
+.header-home > h1{
+  display: flex;
+  justify-content: center;
+  width: 33%;
+}
 .next-prev-symbol {
+  display: flex;
+  justify-content: center;
+  width: 33%;
   font-size: 2rem;
 }
 
@@ -91,6 +103,7 @@ main {
   align-self: flex-end;
   font-size: 1em;
 }
+
 fieldset {
   all: inherit;
   padding: 0.4rem;
@@ -283,6 +296,19 @@ footer > p {
   }
 }
 
+@media only screen and (max-width: 623px) {
+  .header-home > h1{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+  .next-prev-symbol {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    font-size: 2rem;
+  }
+}
 
 @media only screen and (max-width: 551px) {
   .logo{
@@ -316,6 +342,19 @@ footer > p {
 @media only screen and (max-width: 489px) {
   .display-flex-center > form {
     width: 300px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .header-home > h1{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+  }
+  .next-prev-symbol {
+    display: flex;
+    justify-content: center;
+    width: 15%;
+    font-size: 2rem;
   }
 }
 
