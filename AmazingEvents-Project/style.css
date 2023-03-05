@@ -235,16 +235,11 @@ footer > p {
 }
 
 /* Responsive */
-
-.lens-container {
+.container-menu {
   display: none;
 }
 
-.checkbox-menu {
-  display: none;
-}
-
-.nav-menu {
+.navbar {
   display: none;
 }
 
@@ -261,17 +256,6 @@ footer > p {
 }
 
 @media only screen and (max-width: 1060px) {
-  .checkbox-container {
-    display: none;
-  }
-  .checkbox-menu {
-    background-color: #8e1a1a;
-    display: block;
-    border-radius: 10px;
-  }
-  select {
-    font-size: 1em;
-  }
   footer > p {
     width: 30%
   }
@@ -284,9 +268,53 @@ footer > p {
   .web-nav {
     display: none;
   }
-  .nav-menu {
-    display: flex;
+  .container-menu{
+    display: block;
   }
+  .menu-sign {
+    float: right;
+    margin: 0;
+    padding: 0;
+    transition: opacity .3s;
+  }
+
+  .menu-sign .line{
+    width: 50px;
+    height: 4px;
+    background: #e95555;
+    margin: 8px auto;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+  }
+
+  .navbar {
+    float: right;
+    margin-top: 2.5em;
+    transition: all 2s ease-in-out;
+    width: 25%;
+    height: 28vh;
+  }
+
+  .navbar a {
+    display: inline-block;
+    text-decoration: none;
+    color: #eee8e8;
+    margin-bottom: 1em;
+  }
+  
+  .navbar a:hover {
+    color: red;
+  }
+
+  .navbar.active {
+    display: block;
+    animation: fade .5s;
+  }
+  @keyframes fade {
+    from{transform: translateX(200px); opacity: 0;}
+    to {transform: translateX(0px); opacity: 1;}
+  }
+
   .detail-article{
     background-color: unset;
     padding: 1em;
@@ -314,23 +342,22 @@ footer > p {
     width: 25%;
     font-size: 2rem;
   }
+  .form-search-bar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media only screen and (max-width: 551px) {
   .logo{
     width: 80%;
   }
-  .search-container {
-    display: none;
-  }
-  .lens-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
+
   .lens-logo {
     width: 20px;
   }
+
   .cards-container {
     font-size: 0.9em;
     padding: 2em 3em;

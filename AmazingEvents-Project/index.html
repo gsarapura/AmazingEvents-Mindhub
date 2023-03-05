@@ -21,10 +21,21 @@
         <a href="./stats.html" class="nav-button">Stats</a>
       </nav>
 
-      <div class="nav-menu">
-        <a>Menu</a>
-      </div>
+      <div class="container-menu">
+        <div class="menu-sign">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
 
+        <nav class="navbar">
+          <a href="./index.html">Home</a>
+          <a href="./future-events.html">Future Events</a>
+          <a href="./past-events.html">Past Events</a>
+          <a href="./contact.html">Contact</a>
+          <a href="./stats.html">Stats</a>
+        </nav>
+      </div>
     </header>
 
     <main>
@@ -108,18 +119,8 @@
             </div>
           </fieldset>
 
-          <fieldset class="checkbox-menu">
-            <p>
-              Select a category ✓
-            </p>
-          </fieldset>
-
           <fieldset class="search-container">
             <input type="text" id="category" name="category" placeholder="category">
-          </fieldset>
-
-          <fieldset class="lens-container">
-            <img src="./img/maglens.png" class="lens-logo" alt="lens-search">
           </fieldset>
         </form>
         
@@ -143,5 +144,6 @@
   
     <script src="./scripts/eventsData.js"></script>
     <script src="./scripts/renderEvents.js"></script>
+    <script src="./scripts/toggleMenu.js"></script>
   </body>
 </html>
