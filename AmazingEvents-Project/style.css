@@ -110,16 +110,22 @@ fieldset {
   margin-top: 1em;
 }
 
+input, textarea {
+  font-size: 1em;
+}
+
 .cards-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 2em;
-  gap: 1.2em;
+  gap: 3em;
 }
 
-input, textarea {
-  font-size: 1em;
+.single-card-container {
+  background-color: #cd9898;
+  padding: 1em;
+  border-radius: 1em;
 }
 
 .card {

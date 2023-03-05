@@ -5,7 +5,7 @@ let allEventsCards = []
 for (let event of eventsData.events) {
   if (event.date < "2022-01-01"){
     let pastCard = `
-      <article>
+      <article class="single-card-container">
         <figure class="card">
           <img src="${event.image}" alt="${event.name}">
 
@@ -22,7 +22,7 @@ for (let event of eventsData.events) {
     pastEventsCards.push(pastCard)
   } else {
     let futureCard = `
-      <article>
+      <article class="single-card-container">
         <figure class="card">
           <img src="${event.image}" alt="${event.name}">
 
@@ -39,7 +39,7 @@ for (let event of eventsData.events) {
     futureEventsCards.push(futureCard)
   }
   let allCard = `
-    <article>
+    <article class="single-card-container">
       <figure class="card">
         <img src="${event.image}" alt="${event.name}">
 
