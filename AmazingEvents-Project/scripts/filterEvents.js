@@ -4,11 +4,11 @@ form.addEventListener("submit", (e) => {
 });
 
 const filterEvents = () => {
-  let text = document.getElementById("input-category").value.toLowerCase()
+  let textInput = document.getElementById("input-category").value.toLowerCase()
   let checks = Array.from(document.querySelectorAll("input[type=checkbox]:checked")).map(each => each.value)
   let filteredEventsArray = eventsData.events.filter(each => {
     return (
-      (each.name.toLowerCase().includes(text))
+      (each.name.toLowerCase().includes(textInput) || (each.description.toLowerCase().includes(textInput)))
       && 
       (checks.length === 0 || checks.includes(each.category))
     )

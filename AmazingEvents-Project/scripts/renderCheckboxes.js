@@ -3,7 +3,7 @@ for(let event of eventsData.events) {
   categoriesArray.push(event.category)
   categoriesArray= [...new Set(categoriesArray)]
 }
-categoriesArray.map(e => console.log(e))
+
 const createCheckBoxesTemplate = (category) => {
   return `
     <div>
