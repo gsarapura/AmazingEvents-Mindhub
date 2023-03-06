@@ -13,7 +13,7 @@ const filterEvents = () => {
       (checks.length === 0 || checks.includes(each.category))
     )
   })
-  console.log(filteredEventsArray)
+
   if (filteredEventsArray.length > 0) {
     renderEvents("#cards", filteredEventsArray)
   } else {
