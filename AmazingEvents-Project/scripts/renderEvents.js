@@ -1,71 +1,45 @@
-let pastEventsCards = []
-let futureEventsCards = []
-let allEventsCards = []
+let pastEventsArray = []
+let futureEventsArray = []
+let allEventsArray = []
 
 for (let event of eventsData.events) {
   if (event.date < "2022-01-01"){
-    let pastCard = `
-      <article class="single-card-container">
-        <figure class="card">
-          <img src="${event.image}" alt="${event.name}">
-
-          <h2>${event.name}</h2>
-          <figcaption>${event.description}</figcaption>
-
-        </figure>
-        <div class="bottom-card">
-          <p>Price $${event.price.toString()}</p>
-          <a href="./details.html" class="button-more">Ver más</a>
-        </div>
-      </article>
-    `
-    pastEventsCards.push(pastCard)
+    pastEventsArray.push(event)
   } else {
-    let futureCard = `
-      <article class="single-card-container">
-        <figure class="card">
-          <img src="${event.image}" alt="${event.name}">
-
-          <h2>${event.name}</h2>
-          <figcaption>${event.description}</figcaption>
-
-        </figure>
-        <div class="bottom-card">
-          <p>Price $${event.price.toString()}</p>
-          <a href="./details.html" class="button-more">Ver más</a>
-        </div>
-      </article>
-    `
-    futureEventsCards.push(futureCard)
+    futureEventsArray.push(event)
   }
-  let allCard = `
+  allEventsArray.push(event)
+}
+
+const createCardsTemplate = (event) => {
+  return `
     <article class="single-card-container">
-      <figure class="card">
-        <img src="${event.image}" alt="${event.name}">
+    <figure class="card">
+    <img src="${event.image}" alt="${event.name}">
 
-        <h2>${event.name}</h2>
-        <figcaption>${event.description}</figcaption>
+    <h2>${event.name}</h2>
+    <figcaption>${event.description}</figcaption>
 
-      </figure>
-      <div class="bottom-card">
-        <p>Price $${event.price.toString()}</p>
-        <a href="./details.html" class="button-more">Ver más</a>
-      </div>
+    </figure>
+    <div class="bottom-card">
+    <p>Price $${event.price.toString()}</p>
+    <a href="./details.html" class="button-more">Ver más</a>
+    </div>
     </article>
-  `
-  allEventsCards.push(allCard)
+    `
 }
 
-const renderEvents = () => {
-  let container = document.querySelector('#cards')
 
-  if(document.URL.includes("past-events.html")) {
-    container.innerHTML = pastEventsCards.join('')
-  } else if(document.URL.includes("future-events.html")) {
-    container.innerHTML = futureEventsCards.join('')
-  } else {
-    container.innerHTML = allEventsCards.join('')
-  }
+const renderEvents = (id, eventsArray) => {
+  let container = document.querySelector(id)
+  let cardsTemplate = eventsArray.map(createCardsTemplate) 
+  container.innerHTML = cardsTemplate.join('')
 }
 
-renderEvents()
+if(document.URL.includes("past-events.html")) {
+  renderEvents("#cards", pastEventsArray)
+} else if(document.URL.includes("future-events.html")) {
+  renderEvents("#cards", futureEventsArray)
+} else {
+  renderEvents("#cards", allEventsArray)
+}

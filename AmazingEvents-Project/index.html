@@ -50,77 +50,91 @@
           <fieldset class="checkbox-container">
             <div>
               <input 
+                onclick="filterEvents()"
                 type="checkbox" 
                 id="book-exchange" 
                 name="category" 
-                value="book-exchange"
+                value="Book Exchange"
               >
               <label for="book-exchange">Book Exchange</label>
             </div>
 
             <div>
               <input 
+                onclick="filterEvents()"
                 type="checkbox" 
                 id="cinema" 
                 name="category" 
-                value="cinema"
+                value="Cinema"
               >
               <label for="cinema">Cinema</label>
             </div>
 
             <div>
               <input 
+                onclick="filterEvents()"
                 type="checkbox" 
                 id="costume-party" 
                 name="category" 
-                value="costume-party"
+                value="Costume Party"
               >
               <label for="costume-party">Costume Party</label>
             </div>
 
             <div>
               <input 
+                onclick="filterEvents()"
                 type="checkbox" 
                 id="food-fair" 
                 name="category" 
-                value="food-fair"
+                value="Food Fair"
               >
               <label for="food-fair">Food Fair</label>
             </div>
 
             <div>
               <input 
+                onclick="filterEvents()"
                 type="checkbox" 
                 id="museum" 
                 name="category" 
-                value="museum"
+                value="Museum"
               >
               <label for="museum">Museum</label>
             </div>
 
             <div>
               <input 
+                onclick="filterEvents()"
                 type="checkbox" 
                 id="music-concert" 
                 name="category" 
-                value="music-concert"
+                value="Music Concert"
+                clas="abc"
               >
               <label for="music-concert">Music Concert</label>
             </div>
 
             <div>
               <input 
+                onclick="filterEvents()"
                 type="checkbox" 
                 id="race" 
                 name="category" 
-                value="race"
+                value="Race"
               >
               <label for="race">Race</label>
             </div>
           </fieldset>
 
           <fieldset class="search-container">
-            <input type="text" id="category" name="category" placeholder="category">
+            <input 
+              onkeyup="filterEvents()"
+              type="text" 
+              id="input-category" 
+              name="category" 
+              placeholder="Event"
+            >
           </fieldset>
         </form>
         
@@ -145,5 +159,6 @@
     <script src="./scripts/eventsData.js"></script>
     <script src="./scripts/renderEvents.js"></script>
     <script src="./scripts/toggleMenu.js"></script>
+    <script src="./scripts/filterEvents.js"></script>
   </body>
 </html>
