@@ -215,6 +215,15 @@ th {
   margin-bottom: 1em;
 }
 
+.subdetail-card {
+  margin-top: 1em;
+}
+
+.subdetail-card > h3 {
+  margin-bottom: 1em;
+  font-style: italic;
+}
+
 .footer-position {
   display: flex;
   flex-direction: column;

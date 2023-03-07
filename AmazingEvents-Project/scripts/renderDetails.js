@@ -10,17 +10,19 @@ const createDetailTemplate = (event) => {
     <article class="detail-article">
       <div class="detail-card">
         <img src="${event.image}" alt="event photo">
+        <p>Date: ${event.date}</p>
+        <p>Price: $${event.price}</p>
       </div>
 
       <div class="detail-card">
-        <h2>Name: ${event.name}</h2>
-        <p>Date: ${event.date}</p>
-        <p>Description: ${event.description}</p>
-        <p>Category: ${event.category}</p>
-        <p>Place: ${event.place}</p>
-        <p>Capacity: ${event.capacity}</p>
-        <p>${event.assistance? assistance:estimate}: ${event.assistance? event.assistance:event.estimate}</p>
-        <p>Price: ${event.price}</p>
+        <h2>${event.name}</h2>
+        <div class="subdetail-card">
+          <h3>${event.description}</h3>
+          <p>Category: ${event.category}</p>
+          <p>Place: ${event.place}</p>
+          <p>Capacity: ${event.capacity}</p>
+          <p>${event.assistance? assistance:estimate}: ${event.assistance? event.assistance:event.estimate}</p>
+        </div>
       </div>
     </article>
   `
